@@ -57,6 +57,34 @@ CODA was designed using the GCP deployment: NVIDIA GPU-Optimized Image for Deep 
 The most recent tested python environment (Feb 23 2024) is provided in `pip_packages.json`.
 
 # Installation Guide
+
+## Local development install (recommended for local use)
+
+If you have already cloned the repo and want to use `import boda` in notebooks or scripts, install the package in **editable mode** from the repo root:
+
+```bash
+cd /path/to/boda2
+
+# 1. Install PyTorch first (see https://pytorch.org/ for the right command for your system)
+#    Example for CPU-only:
+pip install torch
+
+# 2. Install remaining dependencies
+pip install --upgrade pip==21.3.1
+pip install --no-cache-dir -r requirements.txt
+
+# 3. Install the boda package in editable mode
+pip install -e .
+```
+
+The `-e` flag (editable/development mode) links the package to the repo directory, so any local changes to the source code are reflected immediately without reinstalling.
+
+> **macOS note:** macOS treats filenames as case-insensitive by default. Be sure module filenames are consistently lowercase (e.g., `nuts_legacy.py` rather than `NUTS.py`) to avoid import conflicts.
+
+Important - restart notebook kernel!!!
+
+## Install from GitHub
+
 First install `torch` according to the installation guide at https://pytorch.org/, then CODA can be installed from the latest version of the GITHUB repo. CODA was developed on `torch==1.13.1`.
 ```
 git clone https://github.com/sjgosai/boda2.git
