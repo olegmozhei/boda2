@@ -1,12 +1,13 @@
 ipykernel
+setuptools<71
+numpy<2
 scikit-learn
 
-lightning==1.9.5
+lightning>=2.0
 pyro-ppl
 cmake
 pykeops
 gpytorch
-numpy
 pandas
 scipy
 seaborn
@@ -20,7 +21,7 @@ torchsummary
 gcsfs
 h5py
 
-dmslogo==0.6.2
+dmslogo==0.6.3
 palettable==3.3.0
 imageio==2.9.0
 imageio-ffmpeg==0.4.4

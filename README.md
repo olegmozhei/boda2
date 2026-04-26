@@ -70,7 +70,7 @@ cd /path/to/boda2
 pip install torch
 
 # 2. Install remaining dependencies
-pip install --upgrade pip==21.3.1
+pip install --upgrade pip==26.0.1
 pip install --no-cache-dir -r requirements.txt
 
 # 3. Install the boda package in editable mode
